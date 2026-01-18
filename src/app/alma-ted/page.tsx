@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -12,18 +13,35 @@ export default function AlmaTedPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-neutral text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-3xl">
-            <span className="badge badge-accent text-white mb-4">Advanced Technology</span>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Alma TED Hair Restoration
-            </h1>
-            <p className="text-xl text-gray-200 mb-8">
-              A new reliable way to restore hair – without the hassle of daily
-              treatments or the discomfort of needles.
-            </p>
-            <Link href="/contact" className="btn btn-accent btn-lg text-white">
-              Learn If TED Is Right For You
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Image
+                src="/images/ted-logo.png"
+                alt="Alma TED Logo"
+                width={200}
+                height={40}
+                className="mb-6"
+              />
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+                Alma TED Hair Restoration
+              </h1>
+              <p className="text-xl text-gray-200 mb-8">
+                A new reliable way to restore hair – without the hassle of daily
+                treatments or the discomfort of needles.
+              </p>
+              <Link href="/contact" className="btn btn-accent btn-lg text-white">
+                Learn If TED Is Right For You
+              </Link>
+            </div>
+            <div className="flex justify-center">
+              <Image
+                src="/images/ted-hero.png"
+                alt="Alma TED Device"
+                width={400}
+                height={400}
+                className="rounded-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -83,6 +101,58 @@ export default function AlmaTedPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Technology Image */}
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="/images/ted-tech.png"
+              alt="Alma TED Technology"
+              width={600}
+              height={400}
+              className="rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+            Clinical Results
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card bg-base-100 shadow-lg overflow-hidden">
+              <figure className="relative h-72">
+                <Image
+                  src="/images/ted-case-1.png"
+                  alt="TED Case Study 1"
+                  fill
+                  className="object-contain"
+                />
+              </figure>
+            </div>
+            <div className="card bg-base-100 shadow-lg overflow-hidden">
+              <figure className="relative h-72">
+                <Image
+                  src="/images/ted-case-2.png"
+                  alt="TED Case Study 2"
+                  fill
+                  className="object-contain"
+                />
+              </figure>
+            </div>
+            <div className="card bg-base-100 shadow-lg overflow-hidden">
+              <figure className="relative h-72">
+                <Image
+                  src="/images/ted-case-3.png"
+                  alt="TED Case Study 3"
+                  fill
+                  className="object-contain"
+                />
+              </figure>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 const navigation = [
@@ -79,8 +80,14 @@ export default function Header() {
               </ul>
             )}
           </div>
-          <Link href="/" className="text-xl font-bold tracking-wide">
-            RENEW
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo-white.png"
+              alt="Renew Hair Loss Center"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

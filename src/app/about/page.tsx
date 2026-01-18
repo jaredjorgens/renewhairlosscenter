@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -55,21 +56,13 @@ export default function AboutPage() {
           <div className="card bg-base-100 shadow-xl">
             <div className="card-body">
               <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                <div className="w-48 h-48 bg-base-300 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-24 w-24 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
+                <div className="w-48 h-48 relative rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    src="/images/about-jamie.jpg"
+                    alt="Jamie - Certified Trichologist"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Jamie</h3>

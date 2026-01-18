@@ -1,63 +1,48 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
   {
     title: 'Hair Renewal',
     description: 'Non-surgical hair restoration using specialized techniques and products to stimulate natural hair growth.',
     href: '/services/hair-renewal',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
+    image: '/images/service-1.jpg',
   },
   {
     title: 'Wigs & Cranial Prosthesis',
     description: 'Custom-made medical grade hairpieces designed for individuals experiencing hair loss due to medical conditions.',
     href: '/services/wigs',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
+    image: '/images/wigs-1.jpg',
   },
   {
     title: 'Hair Pieces & Toppers',
     description: 'Natural-looking hair additions that blend seamlessly with your existing hair for added volume and coverage.',
     href: '/services/hair-pieces',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
+    image: '/images/topper-ba.jpg',
   },
   {
     title: 'Scalp Treatments',
     description: 'Therapeutic scalp cleansing and treatments to create the optimal environment for healthy hair growth.',
     href: '/services/scalp-cleanse',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-      </svg>
-    ),
+    image: '/images/service-2.jpg',
   },
 ]
 
-const testimonials = [
+const results = [
   {
-    quote: "Jamie changed my life. After years of struggling with hair loss, I finally found someone who understood and had real solutions. I feel like myself again.",
-    author: "Sarah M.",
-    location: "Orem, UT",
+    image: '/images/testimonial-jon.png',
+    name: 'Jon',
+    description: '6 months of treatment',
   },
   {
-    quote: "The personalized approach at Renew is unlike anything else. They took the time to understand my specific situation and created a treatment plan that actually works.",
-    author: "Michelle K.",
-    location: "Provo, UT",
+    image: '/images/testimonial-james.png',
+    name: 'James',
+    description: 'Hair renewal client',
   },
   {
-    quote: "I was skeptical at first, but the results speak for themselves. The team is professional, caring, and truly experts in their field.",
-    author: "Jennifer L.",
-    location: "Salt Lake City, UT",
+    image: '/images/testimonial-susie.png',
+    name: 'Susie',
+    description: 'Transformation results',
   },
 ]
 
@@ -65,9 +50,19 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-neutral text-white py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-3xl">
+      <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-banner-2.jpg"
+            alt="Hair restoration"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
+          <div className="max-w-2xl text-white">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
               Restore Your Hair.
               <span className="text-accent"> Renew Your Confidence.</span>
@@ -84,6 +79,38 @@ export default function Home() {
                 Explore Services
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-16 bg-base-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+              Real Results
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              See the transformations our clients have experienced with our personalized hair renewal treatments.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {results.map((result, index) => (
+              <div key={index} className="card bg-base-200 shadow-lg overflow-hidden">
+                <figure className="relative h-80">
+                  <Image
+                    src={result.image}
+                    alt={result.name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h3 className="card-title text-primary">{result.name}</h3>
+                  <p className="text-gray-600">{result.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -158,9 +185,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
               <Link key={service.title} href={service.href} className="group">
-                <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-base-300 group-hover:border-accent">
+                <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-base-300 group-hover:border-accent overflow-hidden">
+                  <figure className="relative h-48">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </figure>
                   <div className="card-body">
-                    <div className="text-accent mb-4">{service.icon}</div>
                     <h3 className="card-title text-primary group-hover:text-accent transition-colors">
                       {service.title}
                     </h3>
@@ -199,63 +233,61 @@ export default function Home() {
                 Discover Alma TED
               </Link>
             </div>
-            <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Non-invasive treatment with no needles</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Comfortable procedure with no downtime</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Suitable for both men and women</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Clinically proven technology</span>
-                </li>
-              </ul>
+            <div className="relative">
+              <Image
+                src="/images/ted-hero.png"
+                alt="Alma TED Device"
+                width={500}
+                height={400}
+                className="rounded-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Before/After Gallery */}
       <section className="py-16 bg-base-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              What Our Clients Say
+              Transformations
             </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Real results from real clients
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="card bg-base-100 shadow-lg">
-                <div className="card-body">
-                  <div className="text-accent mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                    </svg>
-                  </div>
-                  <p className="text-gray-600 italic mb-4">{testimonial.quote}</p>
-                  <div className="mt-auto">
-                    <p className="font-semibold text-primary">{testimonial.author}</p>
-                    <p className="text-sm text-gray-500">{testimonial.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card bg-base-100 shadow-lg overflow-hidden">
+              <figure className="relative h-64">
+                <Image
+                  src="/images/before-after-1.jpg"
+                  alt="Before and after transformation"
+                  fill
+                  className="object-cover"
+                />
+              </figure>
+            </div>
+            <div className="card bg-base-100 shadow-lg overflow-hidden">
+              <figure className="relative h-64">
+                <Image
+                  src="/images/before-after-2.jpg"
+                  alt="Before and after transformation"
+                  fill
+                  className="object-cover"
+                />
+              </figure>
+            </div>
+            <div className="card bg-base-100 shadow-lg overflow-hidden">
+              <figure className="relative h-64">
+                <Image
+                  src="/images/before-after-3.jpg"
+                  alt="Before and after transformation"
+                  fill
+                  className="object-cover"
+                />
+              </figure>
+            </div>
           </div>
         </div>
       </section>
