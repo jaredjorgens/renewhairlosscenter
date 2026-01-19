@@ -4,8 +4,60 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About Us | Renew Hair Loss Center',
-  description: 'Meet Jamie, our certified trichologist. Learn about our mission to provide evidence-based hair loss solutions in Orem, Utah.',
+  description: 'Meet our team of certified trichologists, stylists, and healthcare professionals. Learn about our mission to provide evidence-based hair loss solutions in Orem, Utah.',
 }
+
+const teamMembers = [
+  {
+    name: 'Jamie',
+    title: 'Founder, Certified Trichologist & Cranial Prosthesis Specialist',
+    bio: 'Licensed Cosmetologist with 20+ years in the hair care industry. Member of WTS-World Trichology Society and Advisory Board member for Bellu and HairCor Labs. Graduate of Utah Valley University (Business Management, 2012). Founded Renew Hair Loss Center to serve clients seeking honest, effective hair loss solutions.',
+    image: '/images/team-jamie.jpg',
+    badges: ['Certified Trichologist', 'Licensed Cosmetologist', 'Cranial Prosthesis Specialist'],
+  },
+  {
+    name: 'Ashley',
+    title: 'Master Stylist, Scalp Analyst & Cranial Prosthesis Specialist',
+    bio: 'Six years of hair industry experience specializing in scalp analysis and personalized recommendations. Certified cranial prosthesis specialist committed to hair health and integrity with training in barbering and foiling techniques.',
+    image: '/images/team-ashley.jpg',
+    badges: ['Master Stylist', 'Scalp Analyst', 'Cranial Prosthesis Specialist'],
+  },
+  {
+    name: 'Canessa',
+    title: 'Nurse Practitioner',
+    bio: 'Family Nurse Practitioner from University of Utah and BYU. Licensed Utah APRN offering functional health packages addressing hair loss through comprehensive assessments and personalized care.',
+    image: '/images/team-canessa.jpg',
+    badges: ['Family Nurse Practitioner', 'Licensed APRN'],
+  },
+  {
+    name: 'Jenna',
+    title: 'Nutritionist',
+    bio: 'BYU Dietetics program graduate with clinical nutrition expertise. NASM-certified fitness coach offering customized meal plans and personalized fitness guidance for holistic hair growth support.',
+    image: '/images/team-jenna.jpg',
+    badges: ['Nutritionist', 'NASM Certified'],
+  },
+  {
+    name: 'Karla',
+    title: 'Registered Dietitian',
+    bio: 'Registered Dietitian Nutritionist with degrees in Dietetics and Nutritional Science from BYU. Six+ years specializing in gut and metabolic health, offering personalized nutrition and supplement strategies.',
+    image: null,
+    badges: ['Registered Dietitian', 'Nutritional Science'],
+  },
+  {
+    name: 'Katie',
+    title: 'Customer Service Maestro',
+    bio: 'Dedicated professional ensuring exceptional client experiences through attentive listening, attention to detail, and meticulous service coordination.',
+    image: null,
+    badges: ['Customer Service'],
+  },
+  {
+    name: 'Jared',
+    title: 'Chief Technology Officer',
+    bio: '15+ years tech industry experience with Bachelor\'s in Information Technology from Utah Valley University. Manages technology systems and backend operations ensuring customer satisfaction.',
+    image: null,
+    badges: ['Technology', 'Operations'],
+  },
+]
 
 export default function AboutPage() {
   return (
@@ -51,41 +103,48 @@ export default function AboutPage() {
 
       {/* Meet the Team */}
       <section className="py-16 bg-base-200">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Meet the Team</h2>
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body">
-              <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                <div className="w-48 h-48 relative rounded-full overflow-hidden flex-shrink-0">
-                  <Image
-                    src="/images/about-jamie.jpg"
-                    alt="Jamie - Certified Trichologist"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Jamie</h3>
-                  <p className="text-accent font-medium mb-4">Certified Trichologist & Cosmetologist</p>
-                  <p className="text-gray-600 mb-4">
-                    Jamie brings a unique combination of expertise to Renew Hair Loss Center.
-                    As a certified Trichologist, she understands the science of hair and scalp
-                    health. As a licensed Cosmetologist, she can also teach styling techniques
-                    and tricks to make your hair appear fuller during the growth process.
-                  </p>
-                  <p className="text-gray-600 mb-4">
-                    Her dual credentials allow her to address both the medical and aesthetic
-                    aspects of hair loss, providing comprehensive care that goes beyond
-                    traditional approaches.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="badge badge-primary badge-outline">Certified Trichologist</span>
-                    <span className="badge badge-primary badge-outline">Licensed Cosmetologist</span>
-                    <span className="badge badge-primary badge-outline">Hair Piece Specialist</span>
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-primary mb-4 text-center">Meet the Team</h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Our dedicated team of professionals brings together expertise in trichology,
+            cosmetology, nutrition, and healthcare to provide comprehensive hair loss solutions.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="card bg-base-100 shadow-xl">
+                <figure className="px-6 pt-6">
+                  <div className="w-32 h-32 relative rounded-full overflow-hidden bg-base-300">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                </figure>
+                <div className="card-body items-center text-center">
+                  <h3 className="card-title text-primary">{member.name}</h3>
+                  <p className="text-accent font-medium text-sm">{member.title}</p>
+                  <p className="text-gray-600 text-sm mt-2">{member.bio}</p>
+                  <div className="flex flex-wrap gap-1 mt-3 justify-center">
+                    {member.badges.map((badge) => (
+                      <span key={badge} className="badge badge-primary badge-outline badge-sm">
+                        {badge}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

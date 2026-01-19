@@ -246,6 +246,63 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Video */}
+      <section className="py-16 bg-base-200">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+              See Our Work
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From concept to creation, watch the transformational process
+            </p>
+          </div>
+          <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.youtube.com/embed/FbpipZxPgZg"
+              title="Renew Hair Loss Center"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonials */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+              Client Testimonials
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Hear directly from our clients about their experience
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/oYmg817IzII"
+                title="Client Testimonial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/fc6q2gVSuMw"
+                title="Client Testimonial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Before/After Gallery */}
       <section className="py-16 bg-base-200">
         <div className="max-w-7xl mx-auto px-4">
