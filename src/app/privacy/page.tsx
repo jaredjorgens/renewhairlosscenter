@@ -11,49 +11,68 @@ export default function PrivacyPage() {
       <section className="bg-gradient-to-br from-primary to-neutral text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-gray-200">Last updated: January 2024</p>
+          <p className="text-gray-200">Effective Date: January 1, 2023</p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 prose prose-lg">
-          <h2>Information We Collect</h2>
+          <h2>Overview</h2>
           <p>
-            When you visit our website or contact us, we may collect personal information
-            that you voluntarily provide, such as your name, email address, phone number,
-            and any other information you choose to share.
+            Renew Hair Loss Center operates renewhairlosscenter.com. This policy explains how
+            personal information is collected, stored, used, and shared.
           </p>
 
-          <h2>How We Use Your Information</h2>
-          <p>We use the information we collect to:</p>
+          <h2>Policy Updates</h2>
+          <p>
+            The company may modify this policy at any time, alerting users by updating the
+            date at the top of this page.
+          </p>
+
+          <h2>Children Under 13</h2>
+          <p>
+            This service does not knowingly collect information from anyone under 13. Parents
+            suspecting collection should contact support@renewhairlosscenter.com.
+          </p>
+
+          <h2>Information Collected</h2>
+          <p>We may collect the following types of information:</p>
           <ul>
-            <li>Respond to your inquiries and schedule appointments</li>
-            <li>Provide you with information about our services</li>
-            <li>Improve our website and services</li>
-            <li>Send you updates or promotional materials (with your consent)</li>
+            <li><strong>Personal Data:</strong> Name, address, email, phone, demographics</li>
+            <li><strong>Derivative Data:</strong> IP address, browser type, access times, pages viewed</li>
+            <li><strong>Financial Data:</strong> Payment methods (processed through PayPal)</li>
+            <li><strong>Social Media Data:</strong> Information from Facebook, Instagram, LinkedIn, Twitter, Pinterest</li>
+            <li><strong>Mobile Device Data:</strong> Device ID, model, manufacturer, location</li>
+            <li><strong>Other Data:</strong> Contest/survey entries</li>
           </ul>
+
+          <h2>Use of Information</h2>
+          <p>
+            Data supports account creation, order fulfillment, correspondence, personalized
+            recommendations, targeted advertising, and fraud prevention.
+          </p>
 
           <h2>Information Sharing</h2>
           <p>
-            We do not sell, trade, or otherwise transfer your personal information to
-            outside parties. This does not include trusted third parties who assist us
-            in operating our website or conducting our business, so long as those parties
-            agree to keep this information confidential.
+            Data may be disclosed to third-party processors, advertisers, affiliates, and as
+            required by law. The company may share information during corporate restructuring
+            or bankruptcy.
           </p>
 
-          <h2>Data Security</h2>
+          <h2>Cookies and Tracking</h2>
           <p>
-            We implement appropriate security measures to protect your personal information.
-            However, no method of transmission over the Internet or electronic storage is
-            100% secure, and we cannot guarantee absolute security.
+            We make use of log files which include internet protocol (IP) addresses, browser
+            type, Internet Service Provider (ISP), date/time stamps, referring/exit pages,
+            and number of clicks to analyze trends, administer the site, track user&apos;s movement
+            around the site, and gather demographic information. Users can disable cookies
+            through browser settings, though this may affect website functionality.
           </p>
 
-          <h2>Your Rights</h2>
-          <p>
-            You have the right to request access to the personal information we hold about
-            you, request corrections, or request deletion of your data. Contact us at
-            support@renewhairlosscenter.com to exercise these rights.
-          </p>
+          <h2>State-Specific Rights</h2>
+          <ul>
+            <li>California residents may request annual disclosure of third-party data sharing</li>
+            <li>EU residents have GDPR rights to access or delete personal data</li>
+          </ul>
 
           <h2>Contact Us</h2>
           <p>
