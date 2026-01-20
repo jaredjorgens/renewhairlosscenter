@@ -145,9 +145,9 @@ export default function ServicesPage() {
             Schedule a consultation with our certified trichologist. We&apos;ll assess your
             situation and recommend the best treatment options for your needs.
           </p>
-          <Link href="/contact" className="btn btn-accent btn-lg text-white">
-            Book a Consultation
-          </Link>
+          <a href="tel:801-899-9183" className="btn btn-accent btn-lg text-white">
+            Call (801) 899-9183
+          </a>
         </div>
       </section>
     </div>

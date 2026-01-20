@@ -139,9 +139,9 @@ export default function ScalpCleansePage() {
               <p className="text-gray-600 mb-6">
                 Book a scalp treatment session and start your journey to healthier hair.
               </p>
-              <Link href="/contact" className="btn btn-accent text-white btn-lg">
-                Book Treatment
-              </Link>
+              <a href="tel:801-899-9183" className="btn btn-accent text-white btn-lg">
+                Call (801) 899-9183
+              </a>
             </div>
           </div>
         </div>

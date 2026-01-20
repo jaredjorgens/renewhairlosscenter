@@ -100,14 +100,9 @@ export default function FAQsPage() {
             We&apos;re here to help. Contact us directly and we&apos;ll be happy to answer
             any questions you have about our services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn btn-accent btn-lg text-white">
-              Contact Us
-            </Link>
-            <a href="tel:801-899-9183" className="btn btn-outline btn-primary btn-lg">
-              Call (801) 899-9183
-            </a>
-          </div>
+          <a href="tel:801-899-9183" className="btn btn-accent btn-lg text-white">
+            Call (801) 899-9183
+          </a>
         </div>
       </section>
     </div>

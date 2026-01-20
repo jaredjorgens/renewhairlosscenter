@@ -118,9 +118,9 @@ export default function Header() {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link href="/contact" className="btn btn-accent text-white">
-            Book Consultation
-          </Link>
+          <a href="tel:801-899-9183" className="btn btn-accent text-white">
+            Call (801) 899-9183
+          </a>
         </div>
       </nav>
     </header>

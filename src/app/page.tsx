@@ -73,9 +73,9 @@ export default function Home() {
               provides customized treatments to help you look and feel your best.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn btn-accent btn-lg text-white">
-                Schedule Consultation
-              </Link>
+              <a href="tel:801-899-9183" className="btn btn-accent btn-lg text-white">
+                Call (801) 899-9183
+              </a>
               <Link href="/services" className="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
                 Explore Services
               </Link>
@@ -404,14 +404,9 @@ export default function Home() {
             Schedule a consultation with our certified trichologist to discuss
             your personalized treatment plan.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn btn-lg bg-white text-accent hover:bg-gray-100">
-              Book Consultation
-            </Link>
-            <a href="tel:801-899-9183" className="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-accent">
+          <a href="tel:801-899-9183" className="btn btn-lg bg-white text-accent hover:bg-gray-100">
               Call (801) 899-9183
             </a>
-          </div>
         </div>
       </section>
     </div>

@@ -100,9 +100,9 @@ export default function HairRenewalPage() {
               <p className="text-gray-600 mb-6">
                 Schedule a consultation to discuss your options with our certified trichologist.
               </p>
-              <Link href="/contact" className="btn btn-accent text-white btn-lg">
-                Book Consultation
-              </Link>
+              <a href="tel:801-899-9183" className="btn btn-accent text-white btn-lg">
+                Call (801) 899-9183
+              </a>
             </div>
           </div>
         </div>

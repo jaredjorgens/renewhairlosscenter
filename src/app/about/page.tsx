@@ -224,9 +224,9 @@ export default function AboutPage() {
           <p className="text-xl text-white/90 mb-8">
             Schedule a consultation and let us help you find the right solution.
           </p>
-          <Link href="/contact" className="btn btn-lg bg-white text-accent hover:bg-gray-100">
-            Schedule Consultation
-          </Link>
+          <a href="tel:801-899-9183" className="btn btn-lg bg-white text-accent hover:bg-gray-100">
+            Call (801) 899-9183
+          </a>
         </div>
       </section>
     </div>

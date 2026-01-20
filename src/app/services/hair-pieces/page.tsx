@@ -118,9 +118,9 @@ export default function HairPiecesPage() {
                 Schedule a consultation to explore hair piece options and find the
                 perfect solution for your needs.
               </p>
-              <Link href="/contact" className="btn btn-accent text-white btn-lg">
-                Book Consultation
-              </Link>
+              <a href="tel:801-899-9183" className="btn btn-accent text-white btn-lg">
+                Call (801) 899-9183
+              </a>
             </div>
           </div>
         </div>

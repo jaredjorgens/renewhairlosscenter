@@ -139,9 +139,9 @@ export default function WigsPage() {
               <p className="text-gray-600 mb-6">
                 Contact us to schedule a private consultation and fitting appointment.
               </p>
-              <Link href="/contact" className="btn btn-accent text-white btn-lg">
-                Book Appointment
-              </Link>
+              <a href="tel:801-899-9183" className="btn btn-accent text-white btn-lg">
+                Call (801) 899-9183
+              </a>
             </div>
           </div>
         </div>

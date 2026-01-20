@@ -30,9 +30,9 @@ export default function AlmaTedPage() {
                 A new reliable way to restore hair – without the hassle of daily
                 treatments or the discomfort of needles.
               </p>
-              <Link href="/contact" className="btn btn-accent btn-lg text-white">
-                Learn If TED Is Right For You
-              </Link>
+              <a href="tel:801-899-9183" className="btn btn-accent btn-lg text-white">
+                Call (801) 899-9183
+              </a>
             </div>
             <div className="flex justify-center">
               <Image
@@ -308,14 +308,9 @@ export default function AlmaTedPage() {
           <p className="text-xl text-gray-200 mb-8">
             Schedule a consultation to learn if Alma TED is the right solution for you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn btn-accent btn-lg text-white">
-              Book Consultation
-            </Link>
-            <a href="tel:801-899-9183" className="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
-              Call (801) 899-9183
-            </a>
-          </div>
+          <a href="tel:801-899-9183" className="btn btn-accent btn-lg text-white">
+            Call (801) 899-9183
+          </a>
         </div>
       </section>
     </div>
