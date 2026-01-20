@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { getImagePath } from '@/lib/utils'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -82,7 +83,7 @@ export default function Header() {
           </div>
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-white.png"
+              src={getImagePath('/images/logo-white.png')}
               alt="Renew Hair Loss Center"
               width={120}
               height={40}

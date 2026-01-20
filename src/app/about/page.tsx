@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import { getImagePath } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'About Us | Renew Hair Loss Center',
@@ -57,7 +58,7 @@ const teamMembers = [
     image: null,
     badges: ['Technology', 'Operations'],
   },
-]
+].map(m => ({ ...m, image: m.image ? getImagePath(m.image) : null }))
 
 export default function AboutPage() {
   return (

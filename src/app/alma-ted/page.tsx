@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import { getImagePath } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Alma TED Hair Restoration | Renew Hair Loss Center',
@@ -16,7 +17,7 @@ export default function AlmaTedPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Image
-                src="/images/ted-logo.png"
+                src={getImagePath('/images/ted-logo.png')}
                 alt="Alma TED Logo"
                 width={200}
                 height={40}
@@ -35,7 +36,7 @@ export default function AlmaTedPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/images/ted-hero.png"
+                src={getImagePath('/images/ted-hero.png')}
                 alt="Alma TED Device"
                 width={400}
                 height={400}
@@ -107,7 +108,7 @@ export default function AlmaTedPage() {
           {/* Technology Image */}
           <div className="mt-12 flex justify-center">
             <Image
-              src="/images/ted-tech.png"
+              src={getImagePath('/images/ted-tech.png')}
               alt="Alma TED Technology"
               width={600}
               height={400}
@@ -127,7 +128,7 @@ export default function AlmaTedPage() {
             <div className="card bg-base-100 shadow-lg overflow-hidden">
               <figure className="relative h-72">
                 <Image
-                  src="/images/ted-case-1.png"
+                  src={getImagePath('/images/ted-case-1.png')}
                   alt="TED Case Study 1"
                   fill
                   className="object-contain"
@@ -137,7 +138,7 @@ export default function AlmaTedPage() {
             <div className="card bg-base-100 shadow-lg overflow-hidden">
               <figure className="relative h-72">
                 <Image
-                  src="/images/ted-case-2.png"
+                  src={getImagePath('/images/ted-case-2.png')}
                   alt="TED Case Study 2"
                   fill
                   className="object-contain"
@@ -147,7 +148,7 @@ export default function AlmaTedPage() {
             <div className="card bg-base-100 shadow-lg overflow-hidden">
               <figure className="relative h-72">
                 <Image
-                  src="/images/ted-case-3.png"
+                  src={getImagePath('/images/ted-case-3.png')}
                   alt="TED Case Study 3"
                   fill
                   className="object-contain"

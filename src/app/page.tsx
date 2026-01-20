@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 const services = [
   {
@@ -26,7 +27,7 @@ const services = [
     href: '/services/scalp-cleanse',
     image: '/images/service-2.jpg',
   },
-]
+].map(s => ({ ...s, image: getImagePath(s.image) }))
 
 const results = [
   {
@@ -44,7 +45,7 @@ const results = [
     name: 'Susie',
     description: 'Transformation results',
   },
-]
+].map(r => ({ ...r, image: getImagePath(r.image) }))
 
 export default function Home() {
   return (
@@ -53,7 +54,7 @@ export default function Home() {
       <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-banner-2.jpg"
+            src={getImagePath('/images/hero-banner-2.jpg')}
             alt="Hair restoration"
             fill
             className="object-cover"
@@ -235,7 +236,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <Image
-                src="/images/ted-hero.png"
+                src={getImagePath('/images/ted-hero.png')}
                 alt="Alma TED Device"
                 width={500}
                 height={400}
@@ -318,7 +319,7 @@ export default function Home() {
             <div className="card bg-base-100 shadow-lg overflow-hidden">
               <figure className="relative h-64">
                 <Image
-                  src="/images/before-after-1.jpg"
+                  src={getImagePath('/images/before-after-1.jpg')}
                   alt="Before and after transformation"
                   fill
                   className="object-cover"
@@ -328,7 +329,7 @@ export default function Home() {
             <div className="card bg-base-100 shadow-lg overflow-hidden">
               <figure className="relative h-64">
                 <Image
-                  src="/images/before-after-2.jpg"
+                  src={getImagePath('/images/before-after-2.jpg')}
                   alt="Before and after transformation"
                   fill
                   className="object-cover"
@@ -338,7 +339,7 @@ export default function Home() {
             <div className="card bg-base-100 shadow-lg overflow-hidden">
               <figure className="relative h-64">
                 <Image
-                  src="/images/before-after-3.jpg"
+                  src={getImagePath('/images/before-after-3.jpg')}
                   alt="Before and after transformation"
                   fill
                   className="object-cover"
