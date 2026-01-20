@@ -270,12 +270,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Testimonials */}
+      {/* Written Testimonials */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Client Testimonials
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Real stories from real people who have transformed their hair and confidence
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-base-200 p-8 rounded-2xl">
+              <div className="text-accent text-4xl mb-4">&ldquo;</div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Jamie has been great to work with! She believes in my hair regrowth and has given me hope. She truly cares and wants the best results for me. She is very professional and knowledgeable on the subject and didn&apos;t tell me to just use Rogaine…If you stick to the program she lays out, you&apos;ll get results.
+              </p>
+              <p className="font-semibold text-primary">— Barrett</p>
+            </div>
+            <div className="bg-base-200 p-8 rounded-2xl">
+              <div className="text-accent text-4xl mb-4">&ldquo;</div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                I had lost hope. I had given up. I was shopping for a wig. And I was not happy about it. Then my daughter told me about Jamie. I have so much of my hair back and we are working on thickening up everything! Jamie is the best! She makes me feel like I&apos;m the reason she opened up Renew! She is as invested in my hair as I am. Go ahead! Sit behind me or above me. You&apos;ll be amazed!
+              </p>
+              <p className="font-semibold text-primary">— Susie</p>
+            </div>
+            <div className="bg-base-200 p-8 rounded-2xl">
+              <div className="text-accent text-4xl mb-4">&ldquo;</div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                I have really enjoyed working with Jamie. I have tried a few different hair restoration places and they all just threw a shampoo at me and some vitamins and said that should help. Jamie actually knows her stuff and has researched everything she recommends. She actually will work with you to get the best hair back that you can. She&apos;s honest and realistic. You can&apos;t find her skills and knowledge with her hair restoration anywhere else. I would definitely recommend her.
+              </p>
+              <p className="font-semibold text-primary">— Kristina</p>
+            </div>
+            <div className="bg-base-200 p-8 rounded-2xl">
+              <div className="text-accent text-4xl mb-4">&ldquo;</div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                I&apos;ve been working with Jamie for almost a year on my hair loss issue. It&apos;s definitely made a difference. She is very knowledgable and is concerned not just about hair loss, but the impact it had on me. I was at a point where I needed to change my hair style because of my thinning hair. With Jamie&apos;s help, I could continue with the hair style I like. Now if she could find a way, not just to regrow my hair, but make it so the grays would stop showing up, that would be perfect.
+              </p>
+              <p className="font-semibold text-primary">— Jackie</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonials */}
+      <section className="py-16 bg-base-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+              Video Testimonials
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Hear directly from our clients about their experience
